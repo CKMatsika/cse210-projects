@@ -1,9 +1,11 @@
+// Program.cs
 using System;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Journal Project.");
+        // Main program logic will go here
+        Console.WriteLine("Welcome to the Journal Program!");
     }
 }
