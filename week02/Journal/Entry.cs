@@ -11,4 +11,8 @@ public class Entry
         Console.WriteLine($"{_entryText}");
         Console.WriteLine();
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7cd836090ceb342e61fb56712cffe17e677395e4

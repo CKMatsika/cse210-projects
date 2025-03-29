@@ -43,4 +43,8 @@ public class Journal
             _entries.Add(entry);
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7cd836090ceb342e61fb56712cffe17e677395e4

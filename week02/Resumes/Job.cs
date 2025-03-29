@@ -14,4 +14,8 @@ public class Job
     {
         Console.WriteLine($"{_jobTitle} ({_company}) {_startYear}-{_endYear}");
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7cd836090ceb342e61fb56712cffe17e677395e4

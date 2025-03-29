@@ -90,4 +90,8 @@ class Program
     * 5. Shows how many words are still visible and how many are hidden during each step
     *    to help track progress
     */
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7cd836090ceb342e61fb56712cffe17e677395e4
