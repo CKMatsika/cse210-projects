@@ -1,0 +1,55 @@
+using System;
+
+// Checklist goal that must be completed a specific number of times
+public class ChecklistGoal : Goal
+{
+    private int _target;
+    private int _amountCompleted;
+    private int _bonus;
+
+    // Constructor
+    public ChecklistGoal(string name, string description, int points, int target, int bonus) 
+        : base(name, description, points)
+    {
+        _target = target;
+        _bonus = bonus;
+        _amountCompleted = 0;
+    }
+
+    // Constructor for loading from file
+    public ChecklistGoal(string name, string description, int points, int target, int bonus, int amountCompleted) 
+        : base(name, description, points)
+    {
+        _target = target;
+        _bonus = bonus;
+        _amountCompleted = amountCompleted;
+        _isComplete = (_amountCompleted >= _target);
+    }
+
+    // Implementation of the abstract method from base class
+    public override int RecordEvent()
+    {
+        _amountCompleted++;
+        
+        if (_amountCompleted >= _target && !_isComplete)
+        {
+            _isComplete = true;
+            return _points + _bonus; // Award bonus on final completion
+        }
+        
+        return _points;
+    }
+
+    // Override GetDetailsString to show completion progress
+    public override string GetDetailsString()
+    {
+        string completionStatus = _isComplete ? "[X]" : "[ ]";
+        return $"{completionStatus} {_name} ({_description}) -- Currently completed: {_amountCompleted}/{_target}";
+    }
+
+    // Implementation of string representation for saving
+    public override string GetStringRepresentation()
+    {
+        return "";
+    }
+}
